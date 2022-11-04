@@ -42,8 +42,6 @@ public class InventorySystem
                     return true;
                 }
             }
-
-            
         }
         if (HasFreeSlot(out InventorySlot freeSlot))       //SI NO, agarra el primer espacio disponible (slot)
         {

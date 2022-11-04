@@ -47,5 +47,8 @@ public class PlayerMovement : MonoBehaviour
 
             }
         }
+
+        Debug.DrawRay(transform.position, transform.forward);
     }
+
 }

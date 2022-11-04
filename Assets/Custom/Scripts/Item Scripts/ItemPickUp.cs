@@ -11,7 +11,7 @@ public class ItemPickUp : MonoBehaviour
     //Creamos una esfera collider que detectará si el jugadór tocó el objeto
     private SphereCollider myCollider;
 
-    private void Awake()
+    private void Awake() //Precarga el siguiente codigo en el frame 0 ( antes de que comience el juego)
     {
         myCollider = GetComponent<SphereCollider>();
         myCollider.isTrigger = true;
