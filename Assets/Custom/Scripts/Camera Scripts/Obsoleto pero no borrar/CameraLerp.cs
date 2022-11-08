@@ -7,7 +7,6 @@ public class CameraLerp : MonoBehaviour
     public Transform target;
     public Transform personaje;
     public float speed = 1;
-    public float offset;
 
     private void Start()
     {
