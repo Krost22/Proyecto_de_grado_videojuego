@@ -14,8 +14,12 @@ public class PlayerMovement : MonoBehaviour
     const string STATE_QUIETO = "Quieto";
     const string STATE_CORRER = "Correr";
 
-    // Start is called before the first frame update
+//para saber cuando hay doble click del jugador
+    float lastClickTime;
+    private object setbool;
+    const float DOUBLE_CLICK_TIME = 0.2F;
 
+    // Start is called before the first frame update
     void Start()
     {
         //El agente vendria siendo el personaje que es afectado por el asset NAVMESH
@@ -30,9 +34,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Correr();
+        if (animator.GetBool(STATE_QUIETO) == true)
+        {
+            animator.SetBool(STATE_CORRER, false);
+        }
 
         Quieto();
+
+        
+        Correr();
 
         if (Input.GetMouseButton(0))
         {
@@ -54,23 +64,50 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool(STATE_QUIETO, true);
         }
-        else
+        else if(agent.velocity.magnitude > 0)
         {
             animator.SetBool(STATE_QUIETO, false);
         }
     }
         
+    //void Correr()
+    //{
+    //    if (Input.GetMouseButton(0))
+    //    {
+    //        agent.speed = 5;
+    //        animator.SetBool(STATE_CORRER, true);
+    //    }
+    //    else
+    //    {
+    //        agent.speed = 2;
+    //        animator.SetBool(STATE_CORRER, false);
+    //    }
+    //}
+
     void Correr()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            agent.speed = 5;
-            animator.SetBool(STATE_CORRER, true);
-        }
-        else
-        {
-            agent.speed = 2;
-            animator.SetBool(STATE_CORRER, false);
+            
+
+            float timeSinceLastClick = Time.time - lastClickTime;
+
+            if (timeSinceLastClick <= DOUBLE_CLICK_TIME)
+            {
+                //DOBLE CLICK
+
+                agent.speed = 5;
+                animator.SetBool(STATE_CORRER, true);
+            }
+            else 
+            {
+                //NORMAL CLICK
+                agent.speed = 2;
+                animator.SetBool(STATE_CORRER, false);
+
+            }
+
+            lastClickTime = Time.time;
         }
     }
 }
