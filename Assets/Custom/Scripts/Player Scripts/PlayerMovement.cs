@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    public GameObject RutaDestino;
+    public GameObject RutaDestino; //La bolita que pone el mause al hacer click
 
     Animator animator;
     const string STATE_QUIETO = "Quieto";
@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (animator.GetBool(STATE_QUIETO) == true)
+        if (animator.GetBool(STATE_QUIETO) == true) //Esto es para que no pueda estar quieto y
+                                                    //corriendo al mismo tiempo
         {
             animator.SetBool(STATE_CORRER, false);
         }
@@ -54,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
                 RutaDestino.transform.position = hit.point; //mueve el puntero a la misma ubicacion que el ray
             }
         }
-        Debug.DrawRay(transform.position, transform.forward);
+                Debug.DrawRay(transform.position, transform.forward);
     }
 
     void Quieto()
@@ -88,8 +89,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            
-
             float timeSinceLastClick = Time.time - lastClickTime;
 
             if (timeSinceLastClick <= DOUBLE_CLICK_TIME)
@@ -104,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
                 //NORMAL CLICK
                 agent.speed = 2;
                 animator.SetBool(STATE_CORRER, false);
-
             }
 
             lastClickTime = Time.time;
