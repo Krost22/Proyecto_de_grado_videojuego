@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 
 public class PlayerMovement : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    public GameObject RutaDestino; //La bolita que pone el mause al hacer click
+    GameObject Puntero; //La bolita que pone el mause al hacer click
 
     Animator animator;
     const string STATE_QUIETO = "Quieto";
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         //Aqui importamos el parametro animator para controlar las animaciones
         animator = GetComponent<Animator>();
 
-        RutaDestino = GameObject.Find("RutaDestino");
+        Puntero = GameObject.Find("Puntero");
     }
 
     // Update is called once per frame
@@ -41,21 +42,27 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Quieto();
-
         
         Correr();
 
+        MovimientoRayCast();
+
+    
+    }
+
+    void MovimientoRayCast()
+    {
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity)) //Distancia maxima del rayo en este caso es infinita
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity) && !EventSystem.current.IsPointerOverGameObject()) //Distancia maxima del rayo en este caso es infinita
             {
                 agent.SetDestination(hit.point); //mueve al agente a donde golpeo el ray
-                RutaDestino.transform.position = hit.point; //mueve el puntero a la misma ubicacion que el ray
+                Puntero.transform.position = hit.point; //mueve el puntero a la misma ubicacion que el ray
             }
         }
-                Debug.DrawRay(transform.position, transform.forward);
+        Debug.DrawRay(transform.position, transform.forward);
     }
 
     void Quieto()
