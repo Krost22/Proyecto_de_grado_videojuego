@@ -28,8 +28,26 @@ public abstract class InventoryDisplay : MonoBehaviour
             }
         }
     }
-    public void SlotClicked(InventorySlot_UI clickedSlot)
+    public void SlotClicked(InventorySlot_UI clickedUISlot)
     {
-        Debug.Log("Slot clicked");
+        //cuando se haga click en el objeto - y el mause NO tenga ningun objeto - agarra ese objeto
+
+        if (clickedUISlot.AssignedInventorySlot.ItemData != null && mouseInventoryItem.AssignedInventorySlot.ItemData == null)
+        {
+            mouseInventoryItem.UpdateMouseSlot(clickedUISlot.AssignedInventorySlot);
+            clickedUISlot.ClearSlot();
+            return;
+        }
+
+        if (clickedUISlot.AssignedInventorySlot.ItemData == null&&mouseInventoryItem.AssignedInventorySlot.ItemData != null)
+        {
+            clickedUISlot.AssignedInventorySlot.AssingItem(mouseInventoryItem.AssignedInventorySlot);
+            clickedUISlot.UpdateUISlot();
+
+            mouseInventoryItem.ClearSlot();
+        }
+
+
+        //cuando el slot no tenga objeto asignado - el mause si tenga un objeto - Pon el objeto en ese slot vacio
     }
 }
