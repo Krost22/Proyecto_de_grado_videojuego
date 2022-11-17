@@ -68,7 +68,7 @@ namespace XEntity
                 interactionTarget = null;
             }
 
-            if (Input.GetMouseButtonDown(0)) InitInteraction();
+            if (Input.GetMouseButtonDown(1)) InitInteraction(); //Interactuar con los objetos con click derecho
         }
 
         //This returns true if the target position is within the interaction range.

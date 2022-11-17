@@ -20,6 +20,7 @@ namespace XEntity
 
 
         //This method is called when the HP is zero and item needs to be harvested.
+        //Este metodo se llama cuando el HP es 0 y el item tiene que ser recogido
         private void Harvest(Interactor interactor) 
         {
             System.Random prng = new System.Random(GetHashCode());
