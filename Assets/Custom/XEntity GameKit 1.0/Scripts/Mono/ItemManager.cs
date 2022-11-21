@@ -17,6 +17,8 @@ namespace XEntity
         //Either assign the items manually when created or select the item scriptable object > right click > select Add To Item List 
         public List<Item> itemList = new List<Item>();
 
+        public bool KeyHolder = false;
+
         private void Awake()
         {
             //Singleton logic
@@ -51,6 +53,7 @@ namespace XEntity
                 case ItemType.Placeable: PlaceItem(slot); break;
                 case ItemType.Armor: ArmorUse(slot); break;
                 case ItemType.MagicTool: MagicToolUse(slot); break;
+                case ItemType.Key: KeyUse(slot); break;
             }
         }
 
@@ -60,6 +63,12 @@ namespace XEntity
 
 
         //Preset item use methods below:
+        private void KeyUse(ItemSlot slot)
+        {
+            Debug.Log("Tienes la llave equipada");
+            KeyHolder = true;
+            slot.Remove(1);
+        }
 
         private void ArmorUse(ItemSlot slot) 
         {

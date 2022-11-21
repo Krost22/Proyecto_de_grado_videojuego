@@ -9,6 +9,7 @@ namespace XEntity
         Consumeable,
         Placeable,
         Armor,
-        MagicTool
+        MagicTool,
+        Key
     }
 }
