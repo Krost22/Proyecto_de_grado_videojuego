@@ -52,6 +52,8 @@ namespace XEntity
                 case ItemType.Placeable: PlaceItem(slot); break;
                 case ItemType.Armor: ArmorUse(slot); break;
                 case ItemType.MagicTool: MagicToolUse(slot); break;
+                
+
             }
         }
 
