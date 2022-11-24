@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -15,10 +16,16 @@ public class PlayerMovement : MonoBehaviour
     const string STATE_QUIETO = "Quieto";
     const string STATE_CORRER = "Correr";
 
-//para saber cuando hay doble click del jugador
+    //Usamos el objeto que está dentro del personaje para detectar si hay un npc
+    public GameObject NPCDetector;
+    public LayerMask Npc;
+    public PopUpSystem popUpSystem;
+    
+
+    //para saber cuando hay doble click del jugador
     float lastClickTime;
     private object setbool;
-    const float DOUBLE_CLICK_TIME = 0.2F;
+    const float DOUBLE_CLICK_TIME = 0.1F;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
 
         Puntero = GameObject.Find("Puntero");
+
+        popUpSystem.Cn.enabled = false;
     }
 
     // Update is called once per frame
@@ -47,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
 
         MovimientoRayCast();
 
-    
+        NPCRayCast();
+
     }
 
     void MovimientoRayCast()
@@ -77,20 +87,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool(STATE_QUIETO, false);
         }
     }
-        
-    //void Correr()
-    //{
-    //    if (Input.GetMouseButton(0))
-    //    {
-    //        agent.speed = 5;
-    //        animator.SetBool(STATE_CORRER, true);
-    //    }
-    //    else
-    //    {
-    //        agent.speed = 2;
-    //        animator.SetBool(STATE_CORRER, false);
-    //    }
-    //}
 
     void Correr()
     {
@@ -114,5 +110,30 @@ public class PlayerMovement : MonoBehaviour
 
             lastClickTime = Time.time;
         }
+    }
+
+    //Raycast para detectar NPC por distancia
+    public void NPCRayCast()
+    {
+        if (Physics.Raycast(NPCDetector.transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, 3f, layerMask: Npc) 
+            && Input.GetKeyDown(KeyCode.E) 
+            && popUpSystem.Cn.enabled == false) //Si detecta un npc...
+        {
+            //logica despues de detectarlo (lo detecta si el npc pertenece a la layer "Npc"
+
+            popUpSystem.Cn.enabled = true;
+
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.green);
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && popUpSystem.Cn.enabled == true)
+        {
+            //logica si no detecta npc
+
+            popUpSystem.Cn.enabled = false;
+
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20f, Color.red);
+            
+        }
+       
     }
 }

@@ -126,18 +126,548 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ventana de dialogo
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 677
+        width: 2881
+        height: 2282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4a75a3803aa2641a53ac807b198f09
+      internalID: -1515950282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 3084
+        width: 1448
+        height: 2055
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c0b605c388dee4ba662933abcb965e
+      internalID: 159827077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_3
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 3084
+        width: 1448
+        height: 2055
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efdff611080fe54195d0dd359a06995
+      internalID: -717149863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_4
+      rect:
+        serializedVersion: 2
+        x: 3588
+        y: 3084
+        width: 1448
+        height: 2055
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a055b4c7239076a449806e0e252f3e05
+      internalID: 98653766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_5
+      rect:
+        serializedVersion: 2
+        x: 5116
+        y: 3084
+        width: 1441
+        height: 2055
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580617bd597b3fe44a6ce124e99d702b
+      internalID: 9288318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_6
+      rect:
+        serializedVersion: 2
+        x: 7106
+        y: 4445
+        width: 700
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e970a81ef098b4593c9032b84673d8
+      internalID: 1192195217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_7
+      rect:
+        serializedVersion: 2
+        x: 7933
+        y: 4445
+        width: 694
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc22defb6c17b4458380bea8897aa86
+      internalID: 130477056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_8
+      rect:
+        serializedVersion: 2
+        x: 8752
+        y: 4445
+        width: 702
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285d6ad665244e64c892c259c4de4990
+      internalID: -409053476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_9
+      rect:
+        serializedVersion: 2
+        x: 9578
+        y: 4445
+        width: 695
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8586965f26b4c384aa36e56350b8cc48
+      internalID: 9674653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_10
+      rect:
+        serializedVersion: 2
+        x: 10405
+        y: 4445
+        width: 695
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b1826f9f17e494c96b6e8a244e2a9a
+      internalID: 1310800157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_11
+      rect:
+        serializedVersion: 2
+        x: 11224
+        y: 4445
+        width: 701
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aac1bab9d998c14ca07a93bf459cebd
+      internalID: -314868249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_12
+      rect:
+        serializedVersion: 2
+        x: 12051
+        y: 4445
+        width: 694
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c379d7998725b4abf815ea0562790e
+      internalID: -877955770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_13
+      rect:
+        serializedVersion: 2
+        x: 12886
+        y: 4460
+        width: 605
+        height: 731
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370e1d8cd1b52574e8c6d7d1bb82f6c5
+      internalID: -182752153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_14
+      rect:
+        serializedVersion: 2
+        x: 13799
+        y: 4460
+        width: 610
+        height: 731
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd65eeda9ca400438ed0fd84d613af3
+      internalID: 949634629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_15
+      rect:
+        serializedVersion: 2
+        x: 7106
+        y: 3246
+        width: 2319
+        height: 723
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcd464528e5a324e9910718c7cca55b
+      internalID: 1924580731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_16
+      rect:
+        serializedVersion: 2
+        x: 9739
+        y: 1913
+        width: 2012
+        height: 2374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c59998e5ad567d4faddc1185f958d0f
+      internalID: -1633916327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_17
+      rect:
+        serializedVersion: 2
+        x: 12065
+        y: 3245
+        width: 2319
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f77c60b2503b8741aa3be0abf057a12
+      internalID: 1282910972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_18
+      rect:
+        serializedVersion: 2
+        x: 4129
+        y: 691
+        width: 2143
+        height: 2085
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579f769288b32274195f8b85ce51f7c9
+      internalID: 1792801992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_19
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 2316
+        width: 2297
+        height: 738
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccad607bb8bdbe3479ca5fec84ddfcd6
+      internalID: 168037764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_20
+      rect:
+        serializedVersion: 2
+        x: 12087
+        y: 2213
+        width: 2297
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598415d7c848ffe4fbab236cb5498ff4
+      internalID: 306978645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_21
+      rect:
+        serializedVersion: 2
+        x: 7084
+        y: 1313
+        width: 4491
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be45cf2080020da4b93c96ca1e41bc30
+      internalID: 1877506369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_22
+      rect:
+        serializedVersion: 2
+        x: 12073
+        y: 1452
+        width: 2311
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23079d0f14b7e5348bd791dfc49ef420
+      internalID: 2008400071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_23
+      rect:
+        serializedVersion: 2
+        x: 7084
+        y: 750
+        width: 4491
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321f27b2fb43d9b4ab0b55e76d3e4e46
+      internalID: 2123268204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterfazGrafica-Element 2[Convertido]-01-01_24
+      rect:
+        serializedVersion: 2
+        x: 12087
+        y: 765
+        width: 2297
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406b7d24b1f83cd49a4866bbdeb18e19
+      internalID: -793808337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 77cecef2d36510348a59330ed6d56f56
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InterfazGrafica-Element 2[Convertido]-01-01_4: 98653766
+      InterfazGrafica-Element 2[Convertido]-01-01_23: 2123268204
+      Ventana de dialogo: -1515950282
+      InterfazGrafica-Element 2[Convertido]-01-01_1: -298497282
+      InterfazGrafica-Element 2[Convertido]-01-01_13: -182752153
+      InterfazGrafica-Element 2[Convertido]-01-01_7: 130477056
+      InterfazGrafica-Element 2[Convertido]-01-01_16: -1633916327
+      InterfazGrafica-Element 2[Convertido]-01-01_0: 1127755846
+      InterfazGrafica-Element 2[Convertido]-01-01_11: -314868249
+      InterfazGrafica-Element 2[Convertido]-01-01_21: 1877506369
+      InterfazGrafica-Element 2[Convertido]-01-01_12: -877955770
+      InterfazGrafica-Element 2[Convertido]-01-01_24: -793808337
+      InterfazGrafica-Element 2[Convertido]-01-01_2: 159827077
+      InterfazGrafica-Element 2[Convertido]-01-01_17: 1282910972
+      InterfazGrafica-Element 2[Convertido]-01-01_10: 1310800157
+      InterfazGrafica-Element 2[Convertido]-01-01_19: 168037764
+      InterfazGrafica-Element 2[Convertido]-01-01_14: 949634629
+      InterfazGrafica-Element 2[Convertido]-01-01_6: 1192195217
+      InterfazGrafica-Element 2[Convertido]-01-01_20: 306978645
+      InterfazGrafica-Element 2[Convertido]-01-01_5: 9288318
+      InterfazGrafica-Element 2[Convertido]-01-01_3: -717149863
+      InterfazGrafica-Element 2[Convertido]-01-01_15: 1924580731
+      InterfazGrafica-Element 2[Convertido]-01-01_9: 9674653
+      InterfazGrafica-Element 2[Convertido]-01-01_22: 2008400071
+      InterfazGrafica-Element 2[Convertido]-01-01_8: -409053476
+      InterfazGrafica-Element 2[Convertido]-01-01_18: 1792801992
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -15,5 +15,5 @@ MonoBehaviour:
   type: 0
   itemName: Silver Key
   itemPerSlot: 1
-  icon: {fileID: 21300000, guid: fd79f823896bfff4d8c81d1c49eba60d, type: 3}
+  icon: {fileID: -877955770, guid: c93fc8ad6d4f7b548a91b577d85af0b6, type: 3}
   prefab: {fileID: 1192462589436334, guid: 61e7a4d4943a95248a9d88d97d680b61, type: 3}

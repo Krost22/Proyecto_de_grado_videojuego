@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Camera
   - Canvas
+  - Npc
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Npc
   - Water
   - UI
   - Interactable

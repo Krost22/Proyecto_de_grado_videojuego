@@ -15,5 +15,5 @@ MonoBehaviour:
   type: 0
   itemName: Gold Key
   itemPerSlot: 1
-  icon: {fileID: 21300000, guid: 649be789a0c64d1448f76dcdcdee0d99, type: 3}
+  icon: {fileID: 1282910972, guid: c93fc8ad6d4f7b548a91b577d85af0b6, type: 3}
   prefab: {fileID: 1716198916272814, guid: cdc64358fb600b94c83082531a9b43af, type: 3}
