@@ -7,35 +7,37 @@ public class DoorsAndKeys : MonoBehaviour
 {
     //public ItemManager im;
     public ItemContainer ic;
-    public string itemName;
-    public ItemSlot[] arrayObjeto;
+
+    public string itemN;
     private void Start()
     {
-        arrayObjeto = ic.slots;
     }
     private void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player") //si lo que esta atravesando el collider es el jugador, hacer...
         {
-            foreach (ItemSlot itemSlot in arrayObjeto) //busca la llave en el inventario
+            for (int i = 0; i < ic.slots.Length; i++)
             {
-                if(itemSlot.slotItem.itemName==itemName) //si tienes un objeto que coincida con el nombre de la llave...
+
+                if (ic.slots[i].slotItem.itemName == itemN && ic.slots[i].slotItem.itemName != null)
                 {
+                    Debug.Log("Abriste la puerta");
 
-                    Debug.Log("WAOS");                   //Logica para abrir una puerta
-                    Destroy(this.gameObject, 2);
 
-                    break;//si lo encontraste deja de buscar.
                 }
-            }
+                else if (ic.slots[i].slotItem.itemName != itemN && ic.slots[i].slotItem.itemName == null)
+                {
+                    Debug.Log("NO TIENES LA LLAVE");
+                }
 
+            }
         }
-        
+
     }
 
 }

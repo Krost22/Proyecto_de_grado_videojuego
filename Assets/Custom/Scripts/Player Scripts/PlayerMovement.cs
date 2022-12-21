@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -12,25 +13,36 @@ public class PlayerMovement : MonoBehaviour
 
     GameObject Puntero; //La bolita que pone el mause al hacer click
 
+    //ANIMACIONES   
     Animator animator;
     const string STATE_QUIETO = "Quieto";
     const string STATE_CORRER = "Correr";
 
-    //Usamos el objeto que está dentro del personaje para detectar si hay un npc
-    public GameObject NPCDetector;
-    public LayerMask Npc;
-    public PopUpSystem popUpSystem;
-    
-
     //para saber cuando hay doble click del jugador
+    //CORRER
     float lastClickTime;
     private object setbool;
-    const float DOUBLE_CLICK_TIME = 0.1F;
+    const float DOUBLE_CLICK_TIME = 0.2F;
+
+    //Usamos el objeto que está dentro del personaje para detectar si hay un npc
+    //NPC DETECTOR
+    public GameObject NPCDetector;
+    public LayerMask Npc;
+    public PopUpSystem popUp;
+    public Chat chat;
+
+    //RAYCAST
+    
+
+    private void Awake()
+    {
+
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        //El agente vendria siendo el personaje que es afectado por el asset NAVMESH
+        //El agente vendria siendo el personaje que es afectado por el NAVMESH
         agent = GetComponent<NavMeshAgent>();
 
         //Aqui importamos el parametro animator para controlar las animaciones
@@ -38,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
 
         Puntero = GameObject.Find("Puntero");
 
-        popUpSystem.Cn.enabled = false;
     }
 
     // Update is called once per frame
@@ -51,13 +62,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Quieto();
-        
+
         Correr();
 
         MovimientoRayCast();
 
-        NPCRayCast();
-
+      
+           
     }
 
     void MovimientoRayCast()
@@ -77,12 +88,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Quieto()
     {
-         //Si el agente tiene la velocidad de todos sus ejes (XYZ) menor o igual a 0. El agente está STATE_QUIETO para el ANIMATOR
+        //Si el agente tiene la velocidad de todos sus ejes (XYZ) menor o igual a 0. El agente está STATE_QUIETO para el ANIMATOR
         if (agent.velocity.magnitude <= 0)
         {
             animator.SetBool(STATE_QUIETO, true);
         }
-        else if(agent.velocity.magnitude > 0)
+        else if (agent.velocity.magnitude > 0)
         {
             animator.SetBool(STATE_QUIETO, false);
         }
@@ -101,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
                 agent.speed = 5;
                 animator.SetBool(STATE_CORRER, true);
             }
-            else 
+            else
             {
                 //NORMAL CLICK
                 agent.speed = 2;
@@ -112,28 +123,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //Raycast para detectar NPC por distancia
-    public void NPCRayCast()
-    {
-        if (Physics.Raycast(NPCDetector.transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, 3f, layerMask: Npc) 
-            && Input.GetKeyDown(KeyCode.E) 
-            && popUpSystem.Cn.enabled == false) //Si detecta un npc...
-        {
-            //logica despues de detectarlo (lo detecta si el npc pertenece a la layer "Npc"
+    
+    
 
-            popUpSystem.Cn.enabled = true;
-
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.green);
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && popUpSystem.Cn.enabled == true)
-        {
-            //logica si no detecta npc
-
-            popUpSystem.Cn.enabled = false;
-
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20f, Color.red);
-            
-        }
-       
-    }
+    
 }
