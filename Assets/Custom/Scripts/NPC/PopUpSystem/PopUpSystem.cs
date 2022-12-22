@@ -6,13 +6,10 @@ using UnityEngine.UI;
 
 public class PopUpSystem : MonoBehaviour
 {    
-    
-
 
     bool m_HitDetect;
     RaycastHit m_Hit;
     
-
     public Vector3 boxHeight = default;
     public Vector3 maxScale = default;
     Collider m_Collider;
@@ -20,7 +17,9 @@ public class PopUpSystem : MonoBehaviour
 
 
     public Canvas CanvasNpc;
+    public Canvas pressE;
     bool canvasEnable;
+    
 
     private void Awake()
     {        
@@ -43,17 +42,23 @@ public class PopUpSystem : MonoBehaviour
         if (m_HitDetect && m_Hit.transform.tag == "Npc")
         {
             Debug.Log("Hit : " + m_Hit.collider.name);
-            CanvasNpc = m_Hit.transform.GetComponentInChildren<Canvas>();
 
+            CanvasNpc = m_Hit.transform.Find("CanvasNpc").GetComponent<Canvas>();
+            pressE = m_Hit.transform.Find("Press E").GetComponent<Canvas>();
+            pressE.enabled = true;
 
             if (Input.GetKeyDown(KeyCode.E) && canvasEnable == false)
             {
+                
+                
 
                 CanvasNpc.enabled = true;
                 canvasEnable = true;
             }
             else if (Input.GetKeyDown(KeyCode.E) && canvasEnable == true)
             {
+
+                
 
                 CanvasNpc.enabled = false;
                 canvasEnable = false;
@@ -63,10 +68,10 @@ public class PopUpSystem : MonoBehaviour
         }
         else if (!m_HitDetect)
         {
-           
+            pressE.enabled = false;
+            pressE = null;
             CanvasNpc.enabled = false;
             canvasEnable = false;
-
             CanvasNpc = null; // Para quitar el error por que es null borra esto y ponle un canvas en la interfaz grafica.
         }
     }
