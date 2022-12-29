@@ -21,18 +21,19 @@ public class DoorsAndKeys : MonoBehaviour
     {
         if (other.tag == "Player") //si lo que esta atravesando el collider es el jugador, hacer...
         {
-            for (int i = 0; i < ic.slots.Length; i++)
+            for (int i = 0; i < 1; i++)
             {
 
                 if (ic.slots[i].slotItem.itemName == itemN && ic.slots[i].slotItem.itemName != null)
                 {
                     Debug.Log("Abriste la puerta");
-
+                    GameObject.Destroy(this.gameObject);
 
                 }
                 else if (ic.slots[i].slotItem.itemName != itemN && ic.slots[i].slotItem.itemName == null)
                 {
                     Debug.Log("NO TIENES LA LLAVE");
+
                 }
 
             }
