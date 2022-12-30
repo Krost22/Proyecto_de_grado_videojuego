@@ -19,7 +19,7 @@ public class DoorsAndKeys : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") //si lo que esta atravesando el collider es el jugador, hacer...
+        if (other.CompareTag("Player")) //si lo que esta atravesando el collider es el jugador, hacer...
         {
             for (int i = 0; i < 1; i++)
             {

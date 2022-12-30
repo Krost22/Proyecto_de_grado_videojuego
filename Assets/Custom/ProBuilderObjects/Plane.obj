@@ -1,0 +1,36 @@
+# ProBuilder 5.0.6
+# https://unity3d.com/unity/features/worldbuilding/probuilder
+# 29/12/2022 4:09:56 p. m.
+
+mtllib ./Plane.mtl
+o Plane
+
+g Plane
+v 0 0.0001 -21
+v 0 0.0001 -10.5
+v -14.5 0.0001 -21
+v -14.5 0.0001 -10.5
+v 0 0.0001 0
+v -14.5 0.0001 0
+v -29 0.0001 -21
+v -29 0.0001 -10.5
+v -29 0.0001 0
+
+vt 0 -21
+vt 0 -10.5
+vt 14.5 -21
+vt 14.5 -10.5
+vt 0 0
+vt 14.5 0
+vt 29 -21
+vt 29 -10.5
+vt 29 0
+
+vn 0 1 0
+
+usemtl ProBuilder_Default_URP
+f 3/3/1 4/4/1 2/2/1 1/1/1
+f 4/4/1 6/6/1 5/5/1 2/2/1
+f 7/7/1 8/8/1 4/4/1 3/3/1
+f 8/8/1 9/9/1 6/6/1 4/4/1
+

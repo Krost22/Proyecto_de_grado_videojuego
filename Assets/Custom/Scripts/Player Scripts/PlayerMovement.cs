@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    GameObject Puntero; //La bolita que pone el mause al hacer click
+    public GameObject Puntero; //La bolita que pone el mause al hacer click
 
     //ANIMACIONES   
     Animator animator;
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         //Aqui importamos el parametro animator para controlar las animaciones
         animator = GetComponent<Animator>();
 
-        Puntero = GameObject.Find("Puntero");
+       // Puntero = GameObject.Find("Puntero");
 
     }
 
@@ -121,10 +121,5 @@ public class PlayerMovement : MonoBehaviour
 
             lastClickTime = Time.time;
         }
-    }
-
-    
-    
-
-    
+    } 
 }
